@@ -201,11 +201,11 @@ of the effect, just how that works.
 
 ---In React, a function is considered a custom hook if it satisfies the following conditions:
 
-# Its name starts with the word use.This is a convention in React that helps you identify hooks.
+##### Its name starts with the word use.This is a convention in React that helps you identify hooks.
 
-# It calls other hooks like useState, useEffect, useContext, etc. inside of it.
+##### It calls other hooks like useState, useEffect, useContext, etc. inside of it.
 
-# It encapsulates some logic that is likely to be shared between multiple components.
+##### It encapsulates some logic that is likely to be shared between multiple components.
 
 In the code you provided earlier, useBreedList is a custom hook because it starts with use, and it calls the useState and useEffect hooks. It encapsulates the logic for fetching a list of breeds for a given animal and storing it in a local cache.
 
