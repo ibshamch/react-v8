@@ -256,6 +256,8 @@ Jab aik se zayada hooks ka use krna ho lekin returned answers individual data ma
 
 ### React Capabilities [
 
+## React Router :
+
 --- Caches everything automatically
 --- Better to use instead of useEffect
 
