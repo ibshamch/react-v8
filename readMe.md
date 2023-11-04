@@ -260,9 +260,6 @@ Jab aik se zayada hooks ka use krna ho lekin returned answers individual data ma
 
 ## React Router :
 
---- Caches everything automatically
---- Better to use instead of useEffect
-
 React Router is by far the most popular client side router in the React community. It is mature, being used by big companies, and battle tested at large scales.
 
 --- npm install react-router-dom@6.4.1.
@@ -273,5 +270,47 @@ React Router is by far the most popular client side router in the React communit
 
 --- Routes se paths banao or batao kis path pe kya show krna hai
 --- /:variable directly in html ( path="/details/:id" id basically koi variable hai)
+
+#### useParam
+
+#### React Query :
+
+--- EveryBody uses it.
+--- It handles all fettching,catching etc
+--- Hardest part of react is useEffect
+
+--- Minimize effects
+--- use effects in small areas
+
+--- npm install @tanstack/react-query@4.10.1
+--- import QueryClient,QueryClientProvider
+
+--- const queryClient = new QueryClient({
+defaultOptions: {
+queries: {
+staleTime: Infinity, // How long u want me to cache
+cacheTime: Infinity,
+},
+},
+});
+
+--- When you fetch something,don't fetch it again.
+--- Wrap QueryClientProvider around app.js
+--- QueryClientProvider provides context when we wrap it around
+--- <QueryClientProvider client={queryClient}>
+
+
+
+--- After setting up the Query client setup the method for fetching
+
+
+--- !fetch.ok => throw error (if its an unsuccessful request throw an error).
+--- React query expects you to returns a promise.
+
+
+-- Go to file to want u use query in
+-- import useQuery
+-- import fetch method
+-- const result = useQuery(["details",id],fetchPet) // if you dont have details id in cache run fetchPet.
 
 ]
